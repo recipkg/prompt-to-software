@@ -38,3 +38,5 @@ description: 根据 Recipkg 软件配方及全部递归依赖重建软件，生�
 ## 配方与生成源码布局
 
 以配方、规范和验收合同作为主要输入；生成实现位于 `generated/<source-repository-name>/`，每个子目录是独立源码仓库的固定提交 Git 子模块；`generated/` 根下不直接放普通源码。项目保持原名，源码仓库名称全小写、连字符。不要将实现源码打进配方归档，也不要为迁就实现削弱验收。保留原有未提交工作；发布 GitHub 配方仓库时添加 `recipkg` topic 并核对。
+
+不要将 `generated/` 或源码子模块入口加入 Git 忽略规则；用 `git check-ignore --no-index` 检查，确保父仓库能跟踪 gitlink。各源码仓库内可按需忽略单独的构建产物，已有源码和未提交改动须保留。
