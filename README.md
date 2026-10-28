@@ -10,6 +10,8 @@ For state updates, compare complete before-and-after data for the defined interf
 
 For operations that produce streams of results, compare zero, one, and multiple outputs, ordering, scope, state transitions, and mid-stream errors against the pinned reference. Record new observations in the recipe and rebuild the complete context; finite examples and seeded differential checks do not establish general compatibility.
 
+When output formatting, numeric precision, or byte-for-byte compatibility is part of the contract, compare raw output bytes and exit status. Parsing may hide rounding, whitespace, escaping, or negative-zero differences; normalize only where the contract allows it.
+
 Before black-box acceptance, verify which candidate and helper executables actually run. A missing or silently substituted target is a failure; report skipped tests and deliberately used external tools.
 
 ## Use as a project submodule
@@ -32,5 +34,7 @@ This repository is also a Markdown-only Recipkg skill recipe: validate with `rec
 对状态更新，按配方中的接口和权限比较完整的更新前后数据，覆盖相关的省略和空字段，并在需要时重启复查；未定义行为作为配方缺口处理。
 
 对产生结果流的操作，比较零、一个和多个输出、顺序、作用域、状态传递及中途错误；新增观察先写回配方并重新生成完整上下文。有限样本和固定种子差分测试不能证明通用兼容性。
+
+当输出格式、数值精度或逐字节一致属于验收合同时，比较原始输出字节和退出状态；解析可能掩盖舍入、空白、转义或负零差异。只在合同允许时归一化。
 
 黑盒验收前确认实际运行的重建程序和辅助工具；目标缺失或被静默替换时应失败，并记录跳过的测试和有意使用的外部工具。
