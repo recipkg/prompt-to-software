@@ -8,6 +8,8 @@ For stateful interfaces, verify real browser tasks against isolated data and che
 
 For state updates, compare complete before-and-after data for the defined interfaces and permissions, including relevant omitted and empty fields; recheck persistence when required. Treat unspecified behavior as a recipe gap.
 
+For operations that produce streams of results, compare zero, one, and multiple outputs, ordering, scope, state transitions, and mid-stream errors against the pinned reference. Record new observations in the recipe and rebuild the complete context; finite examples and seeded differential checks do not establish general compatibility.
+
 Before black-box acceptance, verify which candidate and helper executables actually run. A missing or silently substituted target is a failure; report skipped tests and deliberately used external tools.
 
 ## Use as a project submodule
@@ -28,5 +30,7 @@ This repository is also a Markdown-only Recipkg skill recipe: validate with `rec
 有状态界面要在隔离数据上实际运行浏览器任务，并检查持久化状态、宽窄视口和错误状态。记录跳过的检查，区分上游观察与重建软件验收。
 
 对状态更新，按配方中的接口和权限比较完整的更新前后数据，覆盖相关的省略和空字段，并在需要时重启复查；未定义行为作为配方缺口处理。
+
+对产生结果流的操作，比较零、一个和多个输出、顺序、作用域、状态传递及中途错误；新增观察先写回配方并重新生成完整上下文。有限样本和固定种子差分测试不能证明通用兼容性。
 
 黑盒验收前确认实际运行的重建程序和辅助工具；目标缺失或被静默替换时应失败，并记录跳过的测试和有意使用的外部工具。
