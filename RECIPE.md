@@ -5,7 +5,7 @@ format = "recipkg/1"
 
 [package]
 name = "prompt-to-software"
-version = "0.1.1"
+version = "0.1.2"
 kind = "skill"
 description = "根据 Recipkg 软件配方及全部递归依赖重建软件，生成实现并实际验证验收条件。用于提示词到软件、从配方构建或验证重建完整性的需求。"
 entry = "SKILL.md"

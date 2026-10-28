@@ -4,6 +4,8 @@
 
 Read [SKILL.md](SKILL.md) for the workflow and linked resources. This is the canonical standalone skill repository used by [Recipkg](https://github.com/recipkg/recipkg).
 
+For stateful interfaces, verify real browser tasks against isolated data and check persisted state, including responsive and error states. Report skipped checks and distinguish observations of the original application from acceptance of a reconstruction.
+
 ## Use as a project submodule
 
 ```sh
@@ -18,3 +20,5 @@ This repository is also a Markdown-only Recipkg skill recipe: validate with `rec
 ## 中文
 
 本仓库只维护 `prompt-to-software` 技能。不同项目应把此同一仓库作为固定提交的 Git 子模块引用，不复制技能正文。修改先回本仓库，再更新项目指针；注意保护本地改动。技能入口与说明见 [SKILL.md](SKILL.md)。
+
+有状态界面要在隔离数据上实际运行浏览器任务，并检查持久化状态、宽窄视口和错误状态。记录跳过的检查，区分上游观察与重建软件验收。
